@@ -17,7 +17,7 @@ import com.mysql.jdbc.interceptors.ServerStatusDiffInterceptor;
  *  11：默认栈为1M
  * */
 // 类: 属性 +方法
-public class JVMDemo {
+public class JVMHh {
 	
 	private String name;
 	// static属性只有一份属于类,不属于对象
@@ -28,7 +28,7 @@ public class JVMDemo {
 	}
 	// 
 	public static void setNum(int num) {
-		JVMDemo.num = num;
+		JVMHh.num = num;
 	}
 
 	public String getName() {
@@ -51,19 +51,19 @@ public class JVMDemo {
 	public static void main(String[] args) {
 		int x = 100;
 		// 根据类创建一个对象
-		JVMDemo demo = new JVMDemo();
+		JVMHh demo = new JVMHh();
 		System.out.println("1:" + demo);
 		demo.setName("admin");
 		// 给静态属性赋值
-		JVMDemo.num = 1000;
+		JVMHh.num = 1000;
 		// 声明了一个变量demo02,并且把demo的值赋给demo02
-		JVMDemo demo2 = new JVMDemo();; // 没有生成新对象
+		JVMHh demo2 = new JVMHh();; // 没有生成新对象
 		demo2.setName("admin2");
-		JVMDemo.setNum(1000);
+		JVMHh.setNum(1000);
 		System.out.println(x);
 		demo.show();
 		demo2.show();
-		JVMDemo.setNum(2000);
-		System.out.println(JVMDemo.num);
+		JVMHh.setNum(2000);
+		System.out.println(JVMHh.num);
 	}
 }

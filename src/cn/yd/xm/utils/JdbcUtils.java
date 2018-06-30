@@ -19,6 +19,8 @@ public class JdbcUtils {
 		  return conn;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			//e.printStackTrace();
+			//以下异常往上抛
 			throw new RuntimeException(e);
 			}
 	}

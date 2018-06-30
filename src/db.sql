@@ -1,4 +1,4 @@
-drop table product;
+#drop table product;
 
 -- product cat_id:称为外键,它参照的是另外一张表的主键
 create table product
@@ -14,5 +14,6 @@ create table product
 
 /* 数据入库测试*/
 insert into product (name,price,remark) values ('computer',3000.00,'test....');
+insert into product (name,price,remark) values ('computer',2000.00,'text....');
 
 select * from product;
